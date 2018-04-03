@@ -1,0 +1,3 @@
+区别并借鉴：
+1、服务.bat里用了 "%~dp0WindowsService.exe"取当前路径
+2、用来EPPlus.dll处理excle数据，因为这个相对aspose，不收费

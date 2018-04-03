@@ -1,0 +1,168 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Content/Guriddo_jqGrid_JS_5.0.0/js/jquery-1.11.0.min.js"></script>
+    <script src="~/Content/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    @*<script src="~/Content/Guriddo_jqGrid_JS_5.0.0/js/jquery.jqGrid.min.js"></script>*@
+    <script src="~/Content/Guriddo_jqGrid_JS_5.0.0/src/jquery.jqGrid.js"></script>
+    <script src="~/Scripts/Home/Index.js"></script>
+
+    <link href="~/Content/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/Guriddo_jqGrid_JS_5.0.0/css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    @*<script src="~/Content/bootstrap-3.3.5/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap-3.3.5/bootstrap-3.3.5/dist/css/bootstrap-theme.min.css" rel="stylesheet" />*@
+    
+    <title>Index</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example of Fluid Layout with Bootstrap version 2.0 from w3cschool.cc">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/assets/css/example-fluid-layout.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/examples/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Content/twitter-bootstrap/bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .nav li {
+            padding-top: 5px;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        .leaderboard {
+            padding: 60px;
+            margin-bottom: 30px;
+            background-image: url('/twitter-bootstrap/images/gridbg.gif');
+            background-repeat: repeat;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+        }
+
+            .leaderboard h1 {
+                font-size: 40px;
+                margin-bottom: 5px;
+                line-height: 1;
+                letter-spacing: -1px;
+                color: #FF6600;
+            }
+
+            .leaderboard p {
+                font-size: 18px;
+                font-weight: 200;
+                line-height: 27px;
+            }
+
+        .well {
+            background-image: url('/twitter-bootstrap/images/gridbg.gif');
+            background-repeat: repeat;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+        }
+
+        .nav .nav-header {
+            font-size: 18px;
+            color:#FF6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">权限管理</li>
+                        <li class="active"><a href="#">用户管理</a></li>
+                        <li><a href="#">部门管理</a></li>
+                        <li><a href="#">角色管理</a></li>
+                        <li><a href="#">菜单管理</a></li>
+                        <!--<li><a href="#">Twitter Bootstrap</a></li>
+                        <li><a href="#">Firebug</a></li>
+                        <li class="nav-header">Backend</li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">PostgreSQL</a></li>
+                        <li><a href="#">MongoDB</a></li>-->
+                    </ul>
+                </div><!--/.well -->
+            </div><!--/span-->
+            <div class="span9">
+                
+                <div class="row-fluid">
+                    <div id="mulFirstPassReport">
+                        <table id="table_FirstPassInfo"></table>
+                        <div id="div_FirstPassInfoPager">
+                        </div>
+                    </div>
+                </div><!--/row-->
+                <hr>
+                <footer>
+                    <p>&copy; Company 2012</p>
+                </footer>
+
+            </div><!--/.fluid-container-->
+            <!-- Le javascript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>
+            <script src="../bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
+            
+</body>
+</html>

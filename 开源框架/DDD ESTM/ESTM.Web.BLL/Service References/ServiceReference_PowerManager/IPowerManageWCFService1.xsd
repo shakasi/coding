@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Serialize.Linq.Nodes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Serialize.Linq.Nodes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Linq.Expressions" />
+  <xs:complexType name="ExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Node">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Linq.Expressions" minOccurs="0" name="NodeType" type="q1:ExpressionType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Type" nillable="true" type="tns:TypeNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpressionNode" nillable="true" type="tns:ExpressionNode" />
+  <xs:complexType name="Node">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Node" nillable="true" type="tns:Node" />
+  <xs:complexType name="MemberMemberBindingNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberBindingNode">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bindings" nillable="true" type="tns:MemberBindingNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberMemberBindingNode" nillable="true" type="tns:MemberMemberBindingNode" />
+  <xs:complexType name="MemberBindingNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Node">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Linq.Expressions" minOccurs="0" name="BindingType" type="q2:MemberBindingType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:MemberInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberBindingNode" nillable="true" type="tns:MemberBindingNode" />
+  <xs:complexType name="MemberInfoNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberNodeGeneric">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberInfoNode" nillable="true" type="tns:MemberInfoNode" />
+  <xs:complexType name="MemberNodeGeneric">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MemberNodeGeneric" Namespace="http://schemas.datacontract.org/2004/07/Serialize.Linq.Nodes" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MemberInfo" Namespace="http://schemas.datacontract.org/2004/07/System.Reflection" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Node">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeclaringType" nillable="true" type="tns:TypeNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Signature" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberNodeGeneric" nillable="true" type="tns:MemberNodeGeneric" />
+  <xs:complexType name="TypeNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Node">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GenericArguments" nillable="true" type="tns:ArrayOfTypeNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TypeNode" nillable="true" type="tns:TypeNode" />
+  <xs:complexType name="ArrayOfTypeNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeNode" nillable="true" type="tns:TypeNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeNode" nillable="true" type="tns:ArrayOfTypeNode" />
+  <xs:complexType name="MemberInfoNodeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MemberInfoNode" nillable="true" type="tns:MemberInfoNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberInfoNodeList" nillable="true" type="tns:MemberInfoNodeList" />
+  <xs:complexType name="MemberInitExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bindings" nillable="true" type="tns:MemberBindingNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="NewExpression" nillable="true" type="tns:NewExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberInitExpressionNode" nillable="true" type="tns:MemberInitExpressionNode" />
+  <xs:complexType name="ExpressionNodeGeneric">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ExpressionNodeGeneric" Namespace="http://schemas.datacontract.org/2004/07/Serialize.Linq.Nodes" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MemberInitExpression" Namespace="http://schemas.datacontract.org/2004/07/System.Linq.Expressions" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNode">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpressionNodeGeneric" nillable="true" type="tns:ExpressionNodeGeneric" />
+  <xs:complexType name="MemberListBindingNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberBindingNode">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Initializers" nillable="true" type="tns:ElementInitNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberListBindingNode" nillable="true" type="tns:MemberListBindingNode" />
+  <xs:complexType name="ElementInitNodeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ElementInitNode" nillable="true" type="tns:ElementInitNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElementInitNodeList" nillable="true" type="tns:ElementInitNodeList" />
+  <xs:complexType name="ElementInitNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Node">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddMethod" nillable="true" type="tns:MethodInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Arguments" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ElementInitNode" nillable="true" type="tns:ElementInitNode" />
+  <xs:complexType name="MethodInfoNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GenericArguments" nillable="true" type="tns:ArrayOfTypeNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="IsGenericMethod" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MethodInfoNode" nillable="true" type="tns:MethodInfoNode" />
+  <xs:complexType name="ConditionalExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IfFalse" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="IfTrue" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Test" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConditionalExpressionNode" nillable="true" type="tns:ConditionalExpressionNode" />
+  <xs:complexType name="MethodCallExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Arguments" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Method" nillable="true" type="tns:MethodInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Object" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MethodCallExpressionNode" nillable="true" type="tns:MethodCallExpressionNode" />
+  <xs:complexType name="ExpressionNodeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpressionNode" nillable="true" type="tns:ExpressionNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpressionNodeList" nillable="true" type="tns:ExpressionNodeList" />
+  <xs:complexType name="NewArrayExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Expressions" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewArrayExpressionNode" nillable="true" type="tns:NewArrayExpressionNode" />
+  <xs:complexType name="MemberExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Expression" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:MemberInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberExpressionNode" nillable="true" type="tns:MemberExpressionNode" />
+  <xs:complexType name="ParameterExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsByRef" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParameterExpressionNode" nillable="true" type="tns:ParameterExpressionNode" />
+  <xs:complexType name="PropertyInfoNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberNodeGeneric">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PropertyInfoNode" nillable="true" type="tns:PropertyInfoNode" />
+  <xs:complexType name="TypeBinaryExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Expression" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="TypeOperand" nillable="true" type="tns:TypeNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TypeBinaryExpressionNode" nillable="true" type="tns:TypeBinaryExpressionNode" />
+  <xs:complexType name="UnaryExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Operand" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnaryExpressionNode" nillable="true" type="tns:UnaryExpressionNode" />
+  <xs:complexType name="MemberBindingNodeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MemberBindingNode" nillable="true" type="tns:MemberBindingNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberBindingNodeList" nillable="true" type="tns:MemberBindingNodeList" />
+  <xs:complexType name="BinaryExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Conversion" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="IsLiftedToNull" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Left" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Method" nillable="true" type="tns:MethodInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Right" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BinaryExpressionNode" nillable="true" type="tns:BinaryExpressionNode" />
+  <xs:complexType name="MemberAssignmentNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberBindingNode">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Expression" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MemberAssignmentNode" nillable="true" type="tns:MemberAssignmentNode" />
+  <xs:complexType name="ConstantExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConstantExpressionNode" nillable="true" type="tns:ConstantExpressionNode" />
+  <xs:complexType name="NewExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Arguments" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Constructor" nillable="true" type="tns:ConstructorInfoNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Members" nillable="true" type="tns:MemberInfoNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewExpressionNode" nillable="true" type="tns:NewExpressionNode" />
+  <xs:complexType name="ConstructorInfoNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberNodeGeneric">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConstructorInfoNode" nillable="true" type="tns:ConstructorInfoNode" />
+  <xs:complexType name="FieldInfoNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MemberNodeGeneric">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldInfoNode" nillable="true" type="tns:FieldInfoNode" />
+  <xs:complexType name="InvocationExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Arguments" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Expression" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvocationExpressionNode" nillable="true" type="tns:InvocationExpressionNode" />
+  <xs:complexType name="LambdaExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Body" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Parameters" nillable="true" type="tns:ExpressionNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LambdaExpressionNode" nillable="true" type="tns:LambdaExpressionNode" />
+  <xs:complexType name="ListInitExpressionNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpressionNodeGeneric">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Initializers" nillable="true" type="tns:ElementInitNodeList">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="NewExpression" nillable="true" type="tns:ExpressionNode">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListInitExpressionNode" nillable="true" type="tns:ListInitExpressionNode" />
+</xs:schema>

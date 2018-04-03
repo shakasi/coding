@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <SendServer Value="smtp.163.com"/>
+  <UserName Value="shakasitest"/>
+  <Password Value="Shaka123456"/>
+  <DisplayName Value="Cuscapi"/><!--shakasi@cuscapi.com-->
+  <ToName Value="VIP"/>
+  <ToEmail Value="shakasitest@163.com"/><!--shakasi@cuscapi.com  shakasitest@163.com-->
+  <ToSubject Value="我是主题"/>
+  <ToBody Value="我是内容"/>
+  <AttachmentList>
+    <Attachment Value=''/>
+  </AttachmentList>
+</Root>

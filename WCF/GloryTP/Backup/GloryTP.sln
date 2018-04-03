@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloryTP", "GloryTP\GloryTP.csproj", "{92327623-58A1-4D5C-BD4D-EF751C9F887C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaka.Utils", "Shaka.Utils\Shaka.Utils.csproj", "{60446712-6BE0-4496-AB11-E4879EB3A425}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92327623-58A1-4D5C-BD4D-EF751C9F887C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92327623-58A1-4D5C-BD4D-EF751C9F887C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92327623-58A1-4D5C-BD4D-EF751C9F887C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92327623-58A1-4D5C-BD4D-EF751C9F887C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60446712-6BE0-4496-AB11-E4879EB3A425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60446712-6BE0-4496-AB11-E4879EB3A425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60446712-6BE0-4496-AB11-E4879EB3A425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60446712-6BE0-4496-AB11-E4879EB3A425}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<orm-mapping>
+  <class table="strgroup">
+    <property name="GroupNumber" type="int">
+      <column name="number"  sql-type="int" primaykey="true"/>
+    </property>
+    <property name="GroupName" type="string">
+      <column name="name" length="32" sql-type="nvarchar" not-null="false"/>
+    </property>
+    <property name="GroupPos" type="int">
+      <column name="grp_pos"  sql-type="int"/>
+    </property>
+    <property name="GroupInventory" type="int">
+      <column name="grp_inv"  sql-type="int"/>
+    </property>
+    <property name="GroupMem" type="int">
+      <column name="grp_mem"  sql-type="int"/>
+    </property>
+    <property name="AllowImport" type="string">
+      <column name="allowimport" length="3" sql-type="char"/>
+    </property>
+    <property name="ExUpdate" type="int">
+      <column name="expupdate"  sql-type="int"/>
+    </property>
+    <property name="SystemType" type="int">
+      <column name="sys_type"  sql-type="int"/>
+    </property>
+    <property name="UploadStatus" type="int">
+      <column name="upload_status"  sql-type="int"/>
+    </property>
+  </class>
+</orm-mapping>

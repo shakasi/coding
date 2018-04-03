@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ESTM.Common.DtoModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ESTM.Common.DtoModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDTO_TB_USERS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_TB_USERS" nillable="true" type="tns:DTO_TB_USERS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_TB_USERS" nillable="true" type="tns:ArrayOfDTO_TB_USERS" />
+  <xs:complexType name="DTO_TB_USERS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Dto_BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CREATETIME" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DEPARTMENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEPARTMENT_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FULLNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MODIFYTIME" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLE_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER_PASSWORD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTO_TB_USERS" nillable="true" type="tns:DTO_TB_USERS" />
+  <xs:complexType name="Dto_BaseModel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Dto_BaseModel" nillable="true" type="tns:Dto_BaseModel" />
+  <xs:complexType name="ArrayOfDTO_TB_DEPARTMENT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_TB_DEPARTMENT" nillable="true" type="tns:DTO_TB_DEPARTMENT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_TB_DEPARTMENT" nillable="true" type="tns:ArrayOfDTO_TB_DEPARTMENT" />
+  <xs:complexType name="DTO_TB_DEPARTMENT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Dto_BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DEPARTMENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEPARTMENT_LEVEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEPARTMENT_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTO_TB_DEPARTMENT" nillable="true" type="tns:DTO_TB_DEPARTMENT" />
+  <xs:complexType name="ArrayOfDTO_TB_ROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_TB_ROLE" nillable="true" type="tns:DTO_TB_ROLE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_TB_ROLE" nillable="true" type="tns:ArrayOfDTO_TB_ROLE" />
+  <xs:complexType name="DTO_TB_ROLE">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Dto_BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CREATETIME" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MODIFYTIME" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ROLE_DEFAULTURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLE_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTO_TB_ROLE" nillable="true" type="tns:DTO_TB_ROLE" />
+  <xs:complexType name="ArrayOfDTO_TB_MENU">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_TB_MENU" nillable="true" type="tns:DTO_TB_MENU" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_TB_MENU" nillable="true" type="tns:ArrayOfDTO_TB_MENU" />
+  <xs:complexType name="DTO_TB_MENU">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Dto_BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MENU_ICO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENU_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENU_LEVEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENU_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENU_URL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SORT_ORDER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTO_TB_MENU" nillable="true" type="tns:DTO_TB_MENU" />
+</xs:schema>

@@ -1,0 +1,2 @@
+我的MVC框架中：
+SQL 的Model和数据库表列用XML 关联，模仿ORM实现中

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueueReceive", "MessageQueueReceive\MessageQueueReceive.csproj", "{4A7AC580-4C89-4BE8-ABF5-374CDF4C431E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueueUtils", "MessageQueueUtils\MessageQueueUtils.csproj", "{A032068B-632F-4BE1-87BA-CFCE1299F812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueueSend", "MessageQueueSend\MessageQueueSend.csproj", "{460C47C2-A155-460B-9FB6-E2FBE0E6E9D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A7AC580-4C89-4BE8-ABF5-374CDF4C431E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7AC580-4C89-4BE8-ABF5-374CDF4C431E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7AC580-4C89-4BE8-ABF5-374CDF4C431E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7AC580-4C89-4BE8-ABF5-374CDF4C431E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A032068B-632F-4BE1-87BA-CFCE1299F812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A032068B-632F-4BE1-87BA-CFCE1299F812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A032068B-632F-4BE1-87BA-CFCE1299F812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A032068B-632F-4BE1-87BA-CFCE1299F812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460C47C2-A155-460B-9FB6-E2FBE0E6E9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460C47C2-A155-460B-9FB6-E2FBE0E6E9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460C47C2-A155-460B-9FB6-E2FBE0E6E9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460C47C2-A155-460B-9FB6-E2FBE0E6E9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0668748d-3562-467e-99c8-e24662930897" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="ESTM.Common.DtoModel" />
+      <ReferencedAssembly AssemblyName="Serialize.Linq" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:1234/MyWCF.Server/IPowermanageWCFService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IPowerManageWCFService3.xsd" MetadataType="Schema" ID="b9b3de45-34d1-4a6e-a9c8-842983672a59" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd3" />
+    <MetadataFile FileName="IPowerManageWCFService1.xsd" MetadataType="Schema" ID="0d33ee41-2eef-4437-8d8d-485e4b44c514" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd2" />
+    <MetadataFile FileName="IPowerManageWCFService31.xsd" MetadataType="Schema" ID="44982cad-378d-4572-830a-1154be4e7f3d" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd4" />
+    <MetadataFile FileName="IPowerManageWCFService.xsd" MetadataType="Schema" ID="23eb6022-f788-45cc-b3f9-8e47a2a77686" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd0" />
+    <MetadataFile FileName="IPowerManageWCFService2.xsd" MetadataType="Schema" ID="27c6f081-2283-42d3-a55b-c1ecfc887139" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowerManageWCFService?xsd=xsd1" />
+    <MetadataFile FileName="PowerManageWCFService.wsdl" MetadataType="Wsdl" ID="92892b9e-aa68-4761-9e85-84177565a642" SourceId="1" SourceUrl="http://127.0.0.1:1234/MyWCF.Server/IPowermanageWCFService" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

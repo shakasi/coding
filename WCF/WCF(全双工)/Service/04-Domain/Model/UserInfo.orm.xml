@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<orm-mapping>
+  <class table="ShakaUser">
+    <property name="UserId" type="string">
+      <column name="UserId" length="50" sql-type="nvarchar" not-null="true" unique="true" isIdentity="false"/>
+    </property>
+    <property name="UserName" type="string">
+      <column name="UserName" length="100" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="UserPwd" type="string">
+      <column name="UserPwd" length="100" sql-type="varchar" not-null="false"/>
+    </property>
+    <property name="IsAble" type="bool">
+      <column name="IsAble" sql-type="bit" not-null="false"/>
+    </property>
+    <property name="AddDate" type="DateTime">
+      <column name="AddDate" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="Description" type="string">
+      <column name="Description" length="200" sql-type="nvarchar" not-null="false"/>
+    </property>
+  </class>
+</orm-mapping>

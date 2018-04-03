@@ -1,0 +1,22 @@
+FTP:
+15行 System.Net.FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create(Url);    ----
+17行 request.Method 不可以直接使用用户的字符串,需要做一个字符串和WebRequestMethods.Ftp成员的对应表   ------------WebRequestMethods.Ftp这个下面的方法本来就是字符串啊。传入是没有问题的最多界面把里面的属性作为下拉列表让用户选择。[Okay]
+26行 response的最后状态是OpeningData表示登陆OK,不是CommandOK,后面可以继续数据连接                    ------------这个应该分别考虑吧如果是deletefile 也会返回OpeningData吗？response.StatusCode == FtpStatusCode.CommandOK || response.StatusCode == FtpStatusCode.FileActionOK||response.StatusCode==FtpStatusCode.OpeningData现在用3个状态只要满足一个就算成功应该可以吧？
+
+Ping
+修改线程控制代码     ----没找到
+48行 pingSender.SendAsync(ip, timeout, buffer, options, waiter.Set());
+应该传waiter.Set(),不是waiter.Reset()
+
+SSH
+连接不上,阻塞在18行 exec.Connect();           ---是不是对方是带证书的，代码修改了下能否帮忙再测下
+
+Telnet
+修改了IP地址或取方式
+以获取到服务器发回的User:,但是后面抛出异常"接收数据的时候出错了! "没有接着往下看,感觉Telnet部分不太好
+
+SNMP
+测试SnmpWalkTest(); 返回result==null, 不知道是不是传入的oid格式不对  ---这个应该是OId的问题
+
+Http和Https 
+登陆授权不是用的浏览器的方式，需要发JSON包，我附上了Python的例子  

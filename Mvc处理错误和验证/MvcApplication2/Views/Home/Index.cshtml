@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript" src="~/JS/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function () {
+            $('#btnTest').click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/TestAjax',
+                    dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        var deplist = $.parseJSON(data);
+                        for (var i = 0; i < deplist.length; i++) {
+                            alert(deplist[i]);
+                        }
+                    }
+                });
+            });
+        })  
+    </script>
+</head>
+<body>
+    <div>
+        我是主页面啊
+    </div>
+    <div>
+        <input id="btnTest" type="button" value="点我测试Ajax" />
+    </div>
+</body>
+</html>

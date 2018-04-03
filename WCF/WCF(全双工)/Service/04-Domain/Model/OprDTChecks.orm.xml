@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<orm-mapping>
+  <class table="OprDTChecks">
+    <property name="storenum" type="string">
+      <column name="storenum" length="7" sql-type="varchar" not-null="true" primaykey="true"/>
+    </property>
+    <property name="busidate" type="DateTime">
+      <column name="busidate" sql-type="datetime" not-null="false"/>
+    </property>
+    <property name="chk_seq" type="int">
+      <column name="chk_seq" sql-type="int" primaykey="true"/>
+    </property>
+    <property name="id" type="string">
+      <column name="id" sql-type="int" />
+    </property>
+    <property name="chk_num" type="int">
+      <column name="chk_num" sql-type="int" />
+    </property>
+    <property name="chk_open" type="string">
+      <column name="chk_open" sql-type="nvarchar" />
+    </property>
+    <property name="chk_open_date_time" type="DateTime">
+      <column name="chk_open_date_time" sql-type="datetime" />
+    </property>
+    <property name="chk_clsd_date_time" type="DateTime">
+      <column name="chk_clsd_date_time" sql-type="datetime" />
+    </property>
+    <property name="tbl_open_date_time" type="DateTime">
+      <column name="tbl_open_date_time" sql-type="datetime" />
+    </property>
+    <property name="subttl_date_time" type="DateTime">
+      <column name="subttl_date_time" sql-type="datetime" />
+    </property>
+    <property name="drawer_time" type="int">
+      <column name="drawer_time" sql-type="smallint" />
+    </property>
+    <property name="rvc_seq" type="int">
+      <column name="rvc_seq" sql-type="int" />
+    </property>
+    <property name="rvc_name" type="string">
+      <column name="rvc_name" sql-type="nvarchar" />
+    </property>
+    <property name="pc_seq" type="int">
+      <column name="pc_seq" sql-type="int" />
+    </property>
+    <property name="pc_name" type="string">
+      <column name="pc_name" sql-type="nvarchar" />
+    </property>
+    <property name="empl_num" type="int">
+      <column name="empl_num" sql-type="int" />
+    </property>
+    <property name="empl_name" type="string">
+      <column name="empl_name" sql-type="nvarchar" />
+    </property>
+    <property name="trans_type_seq" type="int">
+      <column name="trans_type_seq" sql-type="int" />
+    </property>
+    <property name="trans_type_name" type="string">
+      <column name="trans_type_name" sql-type="nvarchar" />
+    </property>
+    <property name="grp" type="int">
+      <column name="grp" sql-type="int" />
+    </property>
+    <property name="tbl_name" type="string">
+      <column name="tbl_name" sql-type="nvarchar" />
+    </property>
+    <property name="section" type="int">
+      <column name="section" sql-type="int" />
+    </property>
+    <property name="section_name" type="string">
+      <column name="section_name" sql-type="char" />
+    </property>
+    <property name="Status" type="int">
+      <column name="Status" sql-type="int" />
+    </property>
+    <property name="last_pc_seq" type="int">
+      <column name="last_pc_seq" sql-type="int" />
+    </property>
+    <property name="last_pc_name" type="string">
+      <column name="last_pc_name" sql-type="nvarchar" />
+    </property>
+    <property name="last_svc_time" type="Datetime">
+      <column name="last_svc_time" sql-type="datetime" />
+    </property>
+    <property name="cov_cnt" type="int">
+      <column name="cov_cnt" sql-type="smallint" />
+    </property>
+    <property name="xfer_chk_num" type="int">
+      <column name="xfer_chk_num" sql-type="int" />
+    </property>
+    <property name="chk_prntd_cnt" type="int">
+      <column name="chk_prntd_cnt" sql-type="smallint" />
+    </property>
+    <property name="remark1" type="string">
+      <column name="remark1" sql-type="nvarchar" />
+    </property>
+    <property name="remark2" type="string">
+      <column name="remark2" sql-type="nvarchar" />
+    </property>
+    <property name="sub_ttl" type="decimal">
+      <column name="sub_ttl" sql-type="decimal" />
+    </property>
+    <property name="tax_ttl" type="decimal">
+      <column name="tax_ttl" sql-type="decimal" />
+    </property>
+    <property name="auto_svc_ttl" type="decimal">
+      <column name="auto_svc_ttl" sql-type="decimal" />
+    </property>
+    <property name="other_svc_ttl" type="decimal">
+      <column name="other_svc_ttl" sql-type="decimal" />
+    </property>
+    <property name="pymnt_ttl" type="decimal">
+      <column name="pymnt_ttl" sql-type="decimal" />
+    </property>
+    <property name="amt_due_ttl" type="decimal">
+      <column name="amt_due_ttl" sql-type="decimal" />
+    </property>
+    <property name="seatprinted" type="string">
+      <column name="seatprinted" sql-type="char" />
+    </property>
+    <property name="seatpaid" type="string">
+      <column name="seatpaid" sql-type="char" />
+    </property>
+    <property name="standalone_check" type="bool">
+      <column name="standalone_check" sql-type="bit" />
+    </property>
+    <property name="summ_ttl_prntd" type="bool">
+      <column name="summ_ttl_prntd" sql-type="bit" />
+    </property>
+    <property name="fast_trans_chk" type="bool">
+      <column name="fast_trans_chk" sql-type="bit" />
+    </property>
+    <property name="chk_cancelled" type="bool">
+      <column name="chk_cancelled" sql-type="bit" />
+    </property>
+    <property name="chk_edited" type="bool">
+      <column name="chk_edited" sql-type="bit" />
+    </property>
+    <property name="training" type="bool">
+      <column name="training" sql-type="bit" />
+    </property>
+    <property name="vatTaxID" type="string">
+      <column name="vatTaxID" sql-type="nvarchar" />
+    </property>
+    <property name="vatTaxRDnumber" type="string">
+      <column name="vatTaxRDnumber" sql-type="nvarchar" />
+    </property>
+    <property name="vattaxnumber" type="string">
+      <column name="vattaxnumber" sql-type="char" />
+    </property>
+    <property name="vatARnumber" type="string">
+      <column name="vatARnumber" sql-type="char" />
+    </property>
+    <property name="ccc_id" type="int">
+      <column name="ccc_id" sql-type="int" />
+    </property>
+    <property name="custid" type="int">
+      <column name="custid" sql-type="int" />
+    </property>
+    <property name="riderid" type="int">
+      <column name="riderid" sql-type="int" />
+    </property>
+    <property name="ridername" type="string">
+      <column name="ridername" sql-type="nvarchar" />
+    </property>
+    <property name="outtime" type="Datetime">
+      <column name="outtime" sql-type="datetime" />
+    </property>
+    <property name="intime" type="Datetime">
+      <column name="intime" sql-type="datetime" />
+    </property>
+    <property name="deltime" type="int">
+      <column name="deltime" sql-type="int" />
+    </property>
+    <property name="undeliveryremark" type="string">
+      <column name="undeliveryremark" sql-type="nvarchar" />
+    </property>
+    <property name="memberid" type="int">
+      <column name="memberid" sql-type="int" />
+    </property>
+    <property name="membername" type="string">
+      <column name="membername" sql-type="nvarchar" />
+    </property>
+    <property name="bpoint" type="decimal">
+      <column name="bpoint" sql-type="decimal" />
+    </property>
+    <property name="memcard" type="string">
+      <column name="memcard" sql-type="varchar" />
+    </property>
+    <property name="misc" type="string">
+      <column name="misc" sql-type="nvarchar" />
+    </property>
+    <property name="survey_code" type="int">
+      <column name="survey_code" sql-type="int" />
+    </property>
+    <property name="survey_code_generate" type="string">
+      <column name="survey_code_generate" sql-type="varchar" />
+    </property>
+    <property name="survey_prt_str" type="string">
+      <column name="survey_prt_str" sql-type="varchar" />
+    </property>
+    <property name="survey_voucher_code" type="string">
+      <column name="survey_voucher_code" sql-type="varchar" />
+    </property>
+    <property name="vattaxDes" type="string">
+      <column name="vattaxDes" sql-type="nvarchar" />
+    </property>
+    <property name="vatARDes" type="string">
+      <column name="vatARDes" sql-type="nvarchar" />
+    </property>
+    <property name="CardNumber" type="string">
+      <column name="CardNumber" sql-type="nvarchar" />
+    </property>
+    <property name="upload_status" type="int">
+      <column name="upload_status" sql-type="int" />
+    </property>
+    <property name="tips" type="decimal">
+      <column name="tips" sql-type="decimal" />
+    </property>
+    <property name="otherId" type="string">
+      <column name="otherId" sql-type="nvarchar" />
+    </property>
+  </class>
+</orm-mapping>

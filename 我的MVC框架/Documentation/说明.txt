@@ -1,0 +1,14 @@
+说明：
+1、启动项目要引用<add key="DataAccess" value="Shaka.SQLServerDAL"/>中指定的程序集，
+   以方便反射。
+2、packages文件夹应该是MVC4生成的，和框架没关系。
+3、关于验证码，是CONTROL层保存到COOKIE，前台JS取的。
+4、模仿了nhibernate，只是实现了查询
+
+
+框架功能：
+1、三层+工厂模式(反射)
+2、用户权限实现
+3、用户密码不可逆加密，数据库连接语句的加密解密
+4、单点登录
+

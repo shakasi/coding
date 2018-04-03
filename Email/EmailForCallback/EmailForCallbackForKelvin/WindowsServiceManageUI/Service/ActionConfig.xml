@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <DoTime Value="13:40"/><!--每天何时触发-->
+  <DoAction Dll="Cuscapi.BLL" Action="EmailBLL"/>
+</Root>

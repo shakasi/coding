@@ -1,0 +1,10 @@
+﻿<CommonConfig>
+  <General>
+    <Copyrights></Copyrights>
+    <PageSize></PageSize>
+    <MaxLoginCounter></MaxLoginCounter>
+  </General>
+  <Cuscapi.EmailForCallback>
+    <ConnectionString>data source=192.168.22.125;Initial Catalog=HeadQ;User ID=datascan;Password=DTSbsd7188228;</ConnectionString>
+  </Cuscapi.EmailForCallback>
+</CommonConfig>

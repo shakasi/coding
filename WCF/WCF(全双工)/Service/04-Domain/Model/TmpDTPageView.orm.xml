@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<orm-mapping>
+  <class table="TmpDTPageView">
+    <property name="ID" type="int">
+      <column name="ID" sql-type="int" primaykey="true"/>
+    </property>
+    <property name="storenum" type="string">
+      <column name="storenum" sql-type="varchar"/>
+    </property>
+    <property name="data" type="string">
+      <column name="data" sql-type="nchar" />
+    </property>
+    <property name="unique" type="string">
+      <column name="unique" sql-type="nchar" />
+    </property>
+    <property name="IsSync" type="string">
+      <column name="IsSync" sql-type="nchar" />
+    </property>
+  </class>
+</orm-mapping>
