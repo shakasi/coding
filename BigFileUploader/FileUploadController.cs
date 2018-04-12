@@ -50,7 +50,6 @@ namespace BigFileUploader
             File.WriteAllText(filepath, meta.ToString());
         }
 
-
         private async Task<UploadMetaData> LoadMeta(string token)
         {
             var filepath = HostingEnvironment.MapPath("~/tokens/" + token + ".json");
@@ -195,7 +194,6 @@ namespace BigFileUploader
             public decimal Progress { get { return CompletedBlocks / (decimal)Blocks.Length; } }
 
             private UploadMetaData() { }
-
 
             public static UploadMetaData Create(long fileSize, long blockSize)
             {

@@ -1,7 +1,10 @@
 "use strict";
 var uploader = (function () {
     function uploader(file) {
-        this.host = "http://upload.jkbat.com/bigfile/";
+        //this.host = "http://upload.jkbat.com/bigfile/";
+        //改成自己的地址
+        this.host = "http://localhost:37968/Upload/";
+
         this.running = false;
         this.completed = false;
         this.file = file;
