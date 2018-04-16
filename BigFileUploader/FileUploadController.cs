@@ -22,7 +22,6 @@ namespace BigFileUploader
             var token = Path.GetRandomFileName();
             var meta = UploadMetaData.Create(fileSize, blockSize);
 
-
             JObject.FromObject(new
             {
                 fileSize,
