@@ -5,6 +5,7 @@ var uploader = (function () {
         //改成自己的地址
         this.host = "http://localhost:37968/";//VS部署
         //this.host = "http://localhost:8080/";//IIS部署，测试过可以
+        //this.host = "http://zhongyh-hsk.wicp.net/";
 
         this.running = false;
         this.completed = false;

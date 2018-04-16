@@ -1,1 +1,4 @@
 WebApi c#使用webuploader分片上传大文件
+
+只需要改下 his.host = "http://localhost:37968/";//VS部署
+用 token 去判断是上次要续传的文件
