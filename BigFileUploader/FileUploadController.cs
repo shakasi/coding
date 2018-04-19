@@ -22,12 +22,12 @@ namespace BigFileUploader
             var token = Path.GetRandomFileName();
             var meta = UploadMetaData.Create(fileSize, blockSize);
 
-            JObject.FromObject(new
-            {
-                fileSize,
-                blockSize,
-                blocks = new bool[fileSize / blockSize + (fileSize % blockSize == 0 ? 0 : 1)],
-            });
+            //JObject.FromObject(new
+            //{
+            //    fileSize,
+            //    blockSize,
+            //    blocks = new bool[fileSize / blockSize + (fileSize % blockSize == 0 ? 0 : 1)],
+            //});
 
             var filepath = HostingEnvironment.MapPath("~/temp/" + token);
             Directory.CreateDirectory(Path.GetDirectoryName(filepath));
