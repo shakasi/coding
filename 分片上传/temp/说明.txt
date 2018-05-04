@@ -1,0 +1,4 @@
+test 是用 手工的例子：BigFileUploader 仿照 uploadDemo
+
+摘自：
+https://blog.csdn.net/wx11408115/article/details/70215714
