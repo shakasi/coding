@@ -1,5 +1,6 @@
+WebApi 接口测试工具
+摘自：
 http://www.cnblogs.com/landeanfen/p/5210356.html
 
 测试地址：
-http://localhost:8080/Help/Index
-http://localhost:8080/Help
+http://localhost:9527/Help/Index
