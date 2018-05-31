@@ -11,6 +11,7 @@ namespace WebApplication1.Controllers
     [RoutePrefix("api/UserInfo")]
     public class ShowController : ApiController
     {
+        [JWTAuth]
         [HttpGet, Route()]
         public IHttpActionResult GetUserInfo()
         {
