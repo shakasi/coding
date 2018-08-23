@@ -80,6 +80,14 @@ namespace Shaka.Utils
                             if (tValue != DBNull.Value)
                             {
                                 Type t = pro.PropertyType;
+
+                                #region 另外一种处理 Nullable 方式，供参考
+                                //if (pro.PropertyType.IsGenericType && pro.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                                //{
+                                //    t = pro.PropertyType.GetGenericArguments()[0];
+                                //}
+                                #endregion
+
                                 if (t == tValue.GetType())
                                 {
                                     pro.SetValue(tInstance, tValue, null);
