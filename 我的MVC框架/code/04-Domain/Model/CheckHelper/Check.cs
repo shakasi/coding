@@ -26,6 +26,10 @@ namespace Shaka.Model
                 }
                 CheckAttribute attribute = checkAttributeArray.First() as CheckAttribute;
                 string proShowName = attribute.ProShowName;
+                if (proShowName == null)
+                {
+                    proShowName = pro.Name;
+                }
 
                 if (attribute.CheckEmpty)
                 {
@@ -61,7 +65,7 @@ namespace Shaka.Model
                     Regex regex = new Regex(attribute.RegexStr);
                     if (obj != null && !regex.IsMatch(obj))
                     {
-                        return string.Format("{0}:{1}", proShowName, attribute.ProShowMsg);
+                        return string.Format("{0}:{1}", proShowName, "格式不正确");
                     }
                 }
             }
@@ -100,15 +104,5 @@ namespace Shaka.Model
         }
 
         public string ProShowName { get; set; }
-
-        public string _proShowMsg = "格式不正确";
-        /// <summary>
-        /// 正则表达式这种信息不确定会用到
-        /// </summary>
-        public string ProShowMsg
-        {
-            get { return this._proShowMsg; }
-            set { this._proShowMsg = value; }
-        }
     }
 }
