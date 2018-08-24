@@ -24,7 +24,7 @@ namespace Shaka.Model
         /// <summary>
         /// 用户登录密码
         /// </summary>
-        [Check(RegexStr = "^[0-9]*[1-9][0-9]*$", ProShowName = "密码", ProShowMsg = "只能数字")]
+        [Check(RegexStr = "^[0-9]*[1-9][0-9]*$")]
         public string UserPwd { get; set; }
 
         /// <summary>
