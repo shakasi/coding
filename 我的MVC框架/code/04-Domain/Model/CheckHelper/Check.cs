@@ -75,33 +75,13 @@ namespace Shaka.Model
 
     public class CheckAttribute : Attribute
     {
-        private bool _checkEmpty = false;
-        public bool CheckEmpty
-        {
-            get { return this._checkEmpty; }
-            set { this._checkEmpty = value; }
-        }
+        public bool CheckEmpty { get; set; }
 
-        private int _minLength = 0;
-        public int MinLength
-        {
-            get { return this._minLength; }
-            set { this._minLength = value; }
-        }
+        public int MinLength { get; set; }
 
-        private int _maxLength = 0;
-        public int MaxLength
-        {
-            get { return this._maxLength; }
-            set { this._maxLength = value; }
-        }
+        public int MaxLength { get; set; }
 
-        private string _regexStr = string.Empty;
-        public string RegexStr
-        {
-            get { return this._regexStr; }
-            set { this._regexStr = value; }
-        }
+        public string RegexStr { get; set; }
 
         public string ProShowName { get; set; }
     }
