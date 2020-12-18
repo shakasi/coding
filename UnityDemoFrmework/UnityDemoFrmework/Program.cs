@@ -9,6 +9,7 @@ using Microsoft.Practices.Unity.Configuration;
 
 namespace UnityDemoFrmework
 {
+    //摘自 https://www.cnblogs.com/slardar1978/p/4205394.html
     class Program
     {
         private static IUnityContainer _container = null;
@@ -17,7 +18,7 @@ namespace UnityDemoFrmework
             try
             {
                 ConfigUnity();
-                IBook a = _container.Resolve<IBook>();
+                IBook a = _container.Resolve<IBook>("bb");
                 Console.WriteLine(a.Write());
                 Console.ReadLine();
             }
@@ -30,9 +31,12 @@ namespace UnityDemoFrmework
         static void ConfigUnity()
         {
             _container = new UnityContainer();
-            //_container.RegisterType<IBook, BBook>();
-            UnityConfigurationSection configuration = (UnityConfigurationSection)System.Configuration.ConfigurationManager.GetSection("unity");
-            configuration.Configure(_container);
+
+            _container.RegisterType<IBook, CBook>("cc");
+            _container.RegisterType<IBook, BBook>("bb");
+
+            //UnityConfigurationSection configuration = (UnityConfigurationSection)System.Configuration.ConfigurationManager.GetSection("unity");
+            //configuration.Configure(_container);
 
             //var map = new ExeConfigurationFileMap { ExeConfigFilename = GetConfigFolderForFile("unity.config") };
             //Configuration config = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
