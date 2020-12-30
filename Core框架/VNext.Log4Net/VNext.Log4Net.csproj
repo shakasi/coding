@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>VNext.Log4Net</AssemblyName>
+    <RootNamespace>VNext.Log4Net</RootNamespace>
+    <Summary>VNext日志组件</Summary>
+    <Description>$(Summary)，封装使用log4net组件来实现框架的日志输出功能</Description>
+    <Version>3.1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VNext\VNext.csproj" />
+  </ItemGroup>
+
+</Project>
