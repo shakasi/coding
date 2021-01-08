@@ -11,18 +11,11 @@ namespace DoCare.WebApi
             CreateHostBuilder(args).Build().Run();
         }
 
-        //public static IHostBuilder CreateHostBuilder(string[] args) =>
-        //    Host.CreateDefaultBuilder(args)
-        //        .ConfigureWebHostDefaults(webBuilder =>
-        //        {
-        //            webBuilder.UseStartup<Startup>();
-        //        });
-
         public static IHostBuilder CreateHostBuilder(string[] args)
             => Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseConfiguration(ConfigurationReader.Appsettings);
-                webBuilder.UseStartup<Startup>();
+                webBuilder.UseStartup<Startup>();//微软示例只有这行
                 webBuilder.UseKestrel().UseUrls("http://*:4888");
             });
     }
