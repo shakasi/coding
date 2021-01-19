@@ -12,5 +12,6 @@ namespace CoreTest.EF
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
           => optionsBuilder
               .UseSqlite(@"data source=Sqlites\\docare.db;");
+              //.UseMySql(@"Server=localhost;database=migrationtest;uid=root;pwd=abcd;");
     }
 }
