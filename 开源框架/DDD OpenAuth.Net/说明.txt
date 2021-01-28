@@ -1,7 +1,0 @@
-来自：https://www.oschina.net/p/OpenAuth-Net
-
-登陆不成功：https://www.w3cschool.cn/openauthdotnet/ixdv1tlv.html
-
-
-备注：
-1、SQLServer 脚本也可以用

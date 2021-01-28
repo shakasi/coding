@@ -1,8 +1,0 @@
-1、无证书和用户名密码认证(WCF中应用HTTPS参考
-   http://www.cnblogs.com/artech/archive/2011/06/02/Authentication_042.html
-2、来自:
-   http://www.cnblogs.com/artech/archive/2007/02/26/656901.html
-3、更为灵活的写法利用下面
-   http://blog.csdn.net/caikeyter/article/details/7940904
-3、
-   net.tcp://192.168.21.87:9800/

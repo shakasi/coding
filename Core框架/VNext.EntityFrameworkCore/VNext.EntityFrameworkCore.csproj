@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>VNext.EntityFrameworkCore</AssemblyName>
+    <RootNamespace>VNext.Entity</RootNamespace>
+    <Summary>VNext数据访问组件</Summary>
+    <Description>$(Summary)，封装EntityFrameworkCore数据访问功能的实现</Description>
+    <Version>3.1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VNext\VNext.csproj" />
+  </ItemGroup>
+</Project>

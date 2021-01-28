@@ -1,8 +1,0 @@
-同语言的没有复杂认证的环境下调试通过
-
-1、请求的时候报错
-   System.Net.Security.SslPolicyErrors.RemoteCertificateNameMismatch
-2、响应的时候
-   System.Net.WebException: 远程服务器返回错误: (500) 内部服务器错误
-3、还有个错误是VS直接引用改URL地址时候
-   System.Net.WebException: 基础连接已经关闭: 未能为 SSL/TLS 安全通道建立信任关系

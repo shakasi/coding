@@ -1,3 +1,0 @@
-有效文件：
-Index.aspx及其引用的CSS，JS
-Handler1.ashx

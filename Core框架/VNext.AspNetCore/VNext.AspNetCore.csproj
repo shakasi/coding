@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>VNext.AspNetCore</AssemblyName>
+    <RootNamespace>VNext.AspNetCore</RootNamespace>
+    <Summary>VNext AspNetCore应用组件</Summary>
+    <Description>$(Summary)，封装基于AspNetCore的服务端功能的封装</Description>
+    <Version>3.1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="3.1.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VNext\VNext.csproj" />
+  </ItemGroup>
+</Project>

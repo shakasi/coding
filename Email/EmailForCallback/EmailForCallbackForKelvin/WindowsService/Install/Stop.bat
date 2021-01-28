@@ -1,2 +1,0 @@
-@net stop ../"EmailService"
-@pause
