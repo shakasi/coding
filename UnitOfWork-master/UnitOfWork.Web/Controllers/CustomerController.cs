@@ -27,7 +27,7 @@ namespace UnitOfWork.Web.Controllers
             }
             catch (Exception ex)
             {
-                
+
             }
             return Content($"The shopping cart number of customer is {customer?.ShoppingCart?.Id}");
         }
