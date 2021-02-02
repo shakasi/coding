@@ -20,10 +20,9 @@ namespace UnitOfWork.Web.Controllers
         [HttpGet]
         public ContentResult Create()
         {
-            Customer.Customer customer = null;
+            Customer.Customer customer = new Customer.Customer() { CustomerName = "shengjie" };
             try
             {
-                customer = new Customer.Customer() { CustomerName = "shengjie" };
                 _customerAppService.CreateCustomer(customer);
             }
             catch (Exception ex)
