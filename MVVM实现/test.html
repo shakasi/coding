@@ -1,0 +1,32 @@
+<div></div>
+<input type="text">
+
+<script>
+    let obj = {};
+
+    function watch(obj, name, callback) {
+        //let value = obj.name;
+        //let value;
+        Object.defineProperty(obj, name, {
+            //set(msg) {
+            set(value) {
+                //value = msg;
+                callback(value);
+            },
+            get() {
+                return value;
+            }
+        });
+    };
+
+    function doSomething(value) {
+        document.querySelector('div').innerHTML = value;
+        document.querySelector('input').value = value; 
+    }
+
+    document.querySelector('input').addEventListener('input', (e) => {
+        obj['msg'] = e.target.value;
+    });
+
+    watch(obj, 'msg', doSomething);
+</script>
