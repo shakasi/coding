@@ -21,12 +21,16 @@
 
     function doSomething(value) {
         document.querySelector('div').innerHTML = value;
-        document.querySelector('input').value = value; 
+        document.querySelector('input').value = value;
     }
 
     document.querySelector('input').addEventListener('input', (e) => {
+        //²âÊÔV¡úM
         obj['msg'] = e.target.value;
     });
 
     watch(obj, 'msg', doSomething);
+
+    //²âÊÔM¡úV
+    obj['msg'] = 11;
 </script>
