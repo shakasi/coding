@@ -1,0 +1,10 @@
+来自：https://www.cnblogs.com/sheng-jie/p/7416302.html（下载 UnitOfWork-master.zip）
+.Net Core和EF Core基于DDD分层思想实现的 UnitOfWork
+
+引用
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Sqlite
+
+add-migration init -v
+Update-Database init
