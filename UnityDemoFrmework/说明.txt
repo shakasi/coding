@@ -1,0 +1,3 @@
+摘自 https://www.cnblogs.com/slardar1978/p/4205394.html
+
+使用Microsoft.Practices.Unity 依赖注入
