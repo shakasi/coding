@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DoCare.Hosting.Core</AssemblyName>
+    <RootNamespace>DoCare.Hosting</RootNamespace>
+    <Summary>发热门诊业务核心</Summary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
+    <!-- MySql -->
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+    <!-- Oracle -->
+    <PackageReference Include="Devart.Data.Oracle.EFCore" Version="9.13.1127" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="3.19.80" />
+    <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
+    <!-- Postgre -->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.4" />
+    <!-- Sqlite -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <!-- SqlServer -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DoCareServiceBase.*.cs">
+      <DependentUpon>DoCareServiceBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="VNext">
+      <HintPath>..\..\libs\VNext.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AutoMapper">
+      <HintPath>..\..\libs\VNext.AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore">
+      <HintPath>..\..\libs\VNext.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

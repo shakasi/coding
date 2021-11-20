@@ -11,7 +11,7 @@ namespace CoreTest.EF
         public DbSet<User> Users { set; get; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
           => optionsBuilder
-              .UseSqlite(@"data source=Sqlites\\docare.db;");
+              .UseSqlite(@"data source=docare.db;");
               //.UseMySql(@"Server=localhost;database=migrationtest;uid=root;pwd=abcd;");
     }
 }

@@ -21,7 +21,7 @@ namespace CoreTest
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseKestrel().UseUrls("http://*:4888");
+                    //webBuilder.UseKestrel().UseUrls("http://*:4888");
                 });
     }
 }

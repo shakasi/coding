@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DoCare.Hosting.EntityConfiguration</AssemblyName>
+    <RootNamespace>DoCare.Hosting.EntityConfiguration</RootNamespace>
+    <Summary>发热门诊实体配置信息</Summary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DoCare.Hosting.Core\DoCare.Hosting.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VNext">
+      <HintPath>..\..\libs\VNext.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore">
+      <HintPath>..\..\libs\VNext.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

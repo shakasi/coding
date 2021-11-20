@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <AssemblyName>DoCare.WebApi</AssemblyName>
+    <RootNamespace>DoCare.WebApi</RootNamespace>
+    <Summary>DoCare.WebApi 发热门诊宿主服务</Summary>
+    <UserSecretsId>0d522764-8f9c-4cc1-ac75-a7f3652c1e5c</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\DoCare.Hosting.Apis\DoCare.Hosting.Apis.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="VNext">
+      <HintPath>..\libs\VNext.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AspNetCore">
+      <HintPath>..\libs\VNext.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AspNetCore.MiniProfiler">
+      <HintPath>..\libs\VNext.AspNetCore.MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AspNetCore.Swagger">
+      <HintPath>..\libs\VNext.AspNetCore.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AutoMapper">
+      <HintPath>..\libs\VNext.AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore.MySql">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore.Oracle">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore.PostgreSql">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore.Sqlite">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.EntityFrameworkCore.SqlServer">
+      <HintPath>..\libs\VNext.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.Log4Net">
+      <HintPath>..\libs\VNext.Log4Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="log\" />
+  </ItemGroup>
+</Project>

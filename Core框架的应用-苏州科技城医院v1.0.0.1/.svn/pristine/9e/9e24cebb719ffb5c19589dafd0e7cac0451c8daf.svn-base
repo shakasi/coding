@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DoCare.Hosting.Hospital</AssemblyName>
+    <RootNamespace>DoCare.Hosting</RootNamespace>
+    <Summary>发热门诊-医院具体实现</Summary>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="System.Private.ServiceModel" Version="4.8.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+  
+   <ItemGroup>
+    <Compile Update="HospitalService.*.cs">
+      <DependentUpon>HospitalService.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\DoCare.Hosting.Core\DoCare.Hosting.Core.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="VNext">
+      <HintPath>..\..\libs\VNext.dll</HintPath>
+    </Reference>
+    <Reference Include="VNext.AutoMapper">
+      <HintPath>..\..\libs\VNext.AutoMapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+</Project>
